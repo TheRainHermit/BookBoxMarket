@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/styles.css'>
+    <title>Document</title>
+</head>
+<body>
+    <h1><b>Formulario de Registro a BookBox Market</b></h1>
+
+    <form action="/submit-form" method="POST" id="formu"></form>
+        <fieldset>
+            <legend><b>INFORMACIÓN DEL USUARIO</b></legend>
+            <!--Aquí va el nombre completo-->
+            <label for="nombre"><b>NOMBRE COMPLETO:</b></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
+            <br>
+            <br>
+
+            <!--Aquí va el correo electrónico-->
+            <label for="email"><b>CORREO ELECTRÓNICO:</b></label>
+            <input type="email" id="email" name="email" placeholder="Ingrese el correo" required>
+            <br>
+            <br>
+
+            <!--Aquí va el número de teléfono-->
+            <label for="telefono"><b>NÚMERO DE TELÉFONO:</b></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese el teléfono">
+            <br>
+            <br>
+
+            <!--Aquí va la fecha de nacimiento-->
+            <label for="fecha_nacimiento"><b>FECHA DE NACIMIENTO:</b></label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+            <br>
+            <br>
+
+            <!--Aquí va el país-->
+            <label for="pais"><b>PAÍS:</b></label>
+            <select name="pais" id="pais">
+                <option value="sel" disabled selected>Seleccione una opción</option>
+                <option value="mx">MÉXICO</option>
+                <option value="es">ESPAÑA</option>
+                <option value="ar">ARGENTINA</option>
+                <option value="co">COLOMBIA</option>
+                <option value="pe">PERÚ</option>
+            </select>
+            <br>
+            <br>
+
+            <!--Aquí va el género-->
+            <fieldset>
+                <legend><b>GÉNERO:</b></legend>
+                <input type="radio" id="masculino" name="masculino">
+                <label for="masculino"><b>MASCULINO</b></label>
+
+                <input type="radio" id="femenino" name="femenino">
+                <label for="femenino"><b>FEMENINO</b></label>
+
+                <input type="radio" id="otro" name="otro">
+                <label for="otro"><b>OTRO</b></label>
+            </fieldset>
+            <br>
+
+            <!--Aquí va el añadir foto-->
+            <label for="foto"><b>Adjuntar una foto de perfil:</b></label>
+            <input type="file" id="foto" name="foto">
+            <br>
+            <br>
+
+            <!--Aquí van los Comentarios-->
+            <label for="comentario"><b>COMENTARIOS:</b></label>
+            <br>
+            <textarea name="comentario" id="comentario" rows="4" cols="50"></textarea>
+            <br>
+            <br>
+
+            <!--Aquí van los Términos y Condiciones-->
+            <fieldset>
+                <input type="checkbox" name="terminos" id="terminos" required>
+                <label for="terminos"><b>ACEPTO LOS TÉRMINOS Y CONDICIONES</b></label>
+            </fieldset>
+            <br>
+
+            <!--Aquí van los botones-->
+            <input type="submit" value="ENVIAR">
+            <input type="reset" value="LIMPIAR">
+        </fieldset>
+    </form>
+</body>
+</html>
