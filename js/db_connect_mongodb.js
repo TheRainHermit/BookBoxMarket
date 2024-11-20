@@ -1,8 +1,8 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const app = express();
-const url = 'mongodb://localhost:27017';
-const dbName = 'test';
+const url = 'mongodb+srv://miguelfabra:BookBox45$*@cluster0.bo4x4.mongodb.net/';
+const dbName = 'bookboxmarket';
 MongoClient.connect(url, { useUnifiedTopology: true }, (err, client) => {
   if (err) throw err;
   const db = client.db(dbName);
