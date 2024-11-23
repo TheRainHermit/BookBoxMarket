@@ -2,81 +2,140 @@
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
-    
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>BookBox Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 </head>
 
 <body>
+  <main>
     <nav>
-        <ul>
-            <li><a href="pages/quienessomos.html">Quiénes Somos</a></li>
-            <li><a href="pages/catalogo.html">Catálogo</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-            <li><a href="pages/carritocompra.html">Obtener Cajas</a></li>
-            <li><a href="pages/donacionlibros.html">Donar Libros</a></li>
-            <li style="float:right"><a href="#about"><img src="images/login.jpg"></a></li>
-        </ul>
+      <ul>
+        <li>BookBox Market</a></li>
+        <li style="float:right"><a href="#about"><img src="images/login.jpg"></a></li>
+      </ul>
     </nav>
-    <img src="images/bookbox.png" alt="Imagen de ejemplo de logo">
-    <h1>BookBox Market</h1>
-    <p>¿Quieres leer? ¡Pues abre una caja!</p>
-    <br>
+    <button class="tablink" onclick="openPage('Inicio', this, 'red')" id="defaultOpen">
+      Inicio
+    </button>
+    <button class="tablink" onclick="openPage('Contacto', this, 'blue')">
+      Contacto
+    </button>
+    <button class="tablink" onclick="openPage('Quienessomos', this, 'orange')">
+      Quiénes Somos
+    </button>
+    <button class="tablink" onclick="openPage('Catalogo', this, 'green')">
+      Catálogo
+    </button>
+    <button class="tablink" onclick="openPage('Compra', this, 'aqua')">
+      Compra cajas
+    </button>
+    <button class="tablink" onclick="openPage('Donacionlibros', this, 'purple')">
+      Dona un libro
+    </button>
 
-    <!--
-    <section id="seccion1">
-        <h2>Imagen de ejemplo</h2>
-        <figure>
-            <img src="images/sadge.jpg" alt="Sadge">
-            <figcaption>Figura 1: Sadge</figcaption>
-        </figure>
-    </section>
-    -->
+    <div id="Inicio" class="tabcontent">
+      <img src="images/bookbox.png" alt="Imagen de ejemplo de logo" />
+      <h1>BookBox Market</h1>
+      <p>¿Quieres leer? ¡Pues abre una caja!</p>
+      <br />
+      <!-- Slideshow container -->
 
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-
+      <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
+
         <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="images/bookbox.png" style="width:100%">
-            <div class="text">Caption Text</div>
+          <div class="numbertext">1 / 3</div>
+          <img src="images/bookbox.png" style="width: 100%" />
+          <div class="text">Caption Text</div>
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="images/sadge.jpg" style="width:100%">
-            <div class="text">Caption Two</div>
+          <div class="numbertext">2 / 3</div>
+          <img src="images/sadge.jpg" style="width: 100%" />
+          <div class="text">Caption Two</div>
         </div>
 
         <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="images/login.jpg" style="width:100%">
-            <div class="text">Caption Three</div>
+          <div class="numbertext">3 / 3</div>
+          <img src="images/login.jpg" style="width: 100%" />
+          <div class="text">Caption Three</div>
         </div>
 
         <!-- Next and previous buttons -->
+
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
+      </div>
+      <br />
 
-    <!-- The dots/circles -->
-    <div style="text-align:center">
+      <!-- The dots/circles -->
+
+      <div style="text-align: center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
 
+    <div id="Contacto" class="tabcontent">
+      <h3>Contacto</h3>
+      <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Quienessomos" class="tabcontent">
+      <h2>Quiénes Somos</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio quaerat iure odit, nisi, facilis
+            ipsa cupiditate modi natus mollitia dolores ipsum! Id, sint. Mollitia deserunt iusto nobis doloremque natus!
+        </p>
+
+        <br>
+        <div class="mision">
+
+            <p class="tmision">Mision</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorum possimus nobis quibusdam
+                obcaecati saepe quas quo! A accusamus ex, quos accusantium corporis et numquam facilis suscipit maiores
+                nihil vitae!</p>
+
+        </div>
+
+        <div class="vision">
+
+            <p class="tvision">Vision</p>
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias corporis tempora dolorem distinctio, nam
+                ratione sint officia pariatur, dolores facere voluptatum? Enim architecto distinctio eligendi nam
+                nostrum nesciunt deleniti sapiente?</p>
+
+
+            
+
+        </div>
+    </div>
+
+    <div id="Catalogo" class="tabcontent">
+      <h3>Catálogo</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+    <div id="Compra" class="tabcontent">
+      <h3>Compra Cajas</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+    <div id="Donacionlibros" class="tabcontent">
+      <h3>Donación de Libros</h3>
+      <p>Who we are and what we do.</p>
+    </div>
     <footer>
-        <p>&copy; 2024, BookBox Market. Todos los derechos reservados.</p>
-    </footer>   
+      <p>&copy; 2024, BookBox Market. Todos los derechos reservados.</p>
+    </footer>
+  </main>
+ 
 
-    <script src="js/app_index.js"></script>
-
+  <script src="js/app_index.js"></script>
 </body>
 
 </html>
