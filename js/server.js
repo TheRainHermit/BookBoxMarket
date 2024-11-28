@@ -1,46 +1,116 @@
-// Server.js
-
-// Imports //
 const express = require("express");
-const passport = require("passport");
-const User = require("./models.js");
-const localStrategy = require("./passp.js");
-const controllers = require("./controllers.js");
-const cookieParser = require("cookie-parser");
-const connectDB = require("./db");
-const ejs = require("ejs");
+const path = require("path");
 const bodyParser = require("body-parser");
-const routes = require("./pages.js");
-const session = require("express-session");
-
-// Main Server //
+const mysql = require("mysql");
 const app = express();
-connectDB();
-app.use(
-    session({
-        secret: "GFGLogin346",
-        resave: false,
-        saveUninitialized: false,
-    })
-);
-app.use(cookieParser());
-app.use(bodyParser.json());
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
+
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(express.static("css"));
+app.use(express.static("js"));
+app.use(express.static("images"));
+app.use(express.static("views"));
 app.set("view engine", "ejs");
 
-// Serialize and deserialize user objects to maintain user sessions
-passport.serializeUser((user, done) => done(null, user.id));
-passport.deserializeUser((id, done) => {
-    User.findById(id, (err, user) => done(err, user));
+// Configuración de la base de datos
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "bookboxmarket",
 });
-// Use the routes
-app.use("/api/", controllers); // Path to your authentication routes file
-app.use("/", routes);
 
-// Start the server
-const port = 3000; // Replace with your desired port number
-app.listen(port, () => {
-    console.log(`Server started on port ${port}`);
+db.connect((err) => {
+  if (err) throw err;
+  console.log("Conectado a la base de datos MySQL");
+});
+
+// Ruta para la página de inicio
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
+app.get("/registro", (req, res) => {
+  res.render("registro");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+// Ruta para el registro de usuarios
+app.post("/register", (req, res) => {
+  const {
+    nombre,
+    apellido,
+    email,
+    password,
+    telefono,
+    direccion,
+    ciudad,
+    pais,
+    codigo_postal,
+    fecha_nto,
+    preferencias_literarias,
+  } = req.body;
+  bcrypt.hash(password, saltRounds, (err, hash) => {
+    if (err) throw err;
+    const sql =
+      "INSERT INTO users (nombre, apellido, email, password, telefono," +
+      "direccion, ciudad, pais, codigo_postal, fecha_nto, preferencias_literarias)" +
+      "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    db.query(
+      sql,
+      [
+        nombre,
+        apellido,
+        email,
+        hash,
+        telefono,
+        direccion,
+        ciudad,
+        pais,
+        codigo_postal,
+        fecha_nto,
+        preferencias_literarias,        
+      ],
+      (err, result) => {
+        if (err) throw err;
+        res.redirect("/");
+      }
+    );
+  });
+});
+
+// Ruta para el logueo de usuarios
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+  console.log(req.body);
+  const sql = "SELECT * FROM users WHERE email = ?";
+  db.query(sql, [email], (err, results) => {
+    if (err) throw err;
+    if (results.length > 0) {
+      console.log(results);
+      const user = results[0];
+      bcrypt.compare(password, user.password, (err, result) => {
+        if (err) throw err;
+        if (result) {
+          res.redirect("/");
+          //res.send("Inicio de sesión exitoso");
+          console.log("Inicio de sesión exitoso");
+          
+        } else {
+          res.send("E-mail o contraseña incorrectos");
+        }
+      });
+    } else {
+      console.log(results);
+      res.send("E-mail o contraseña incorrectos");
+    }
+  });
+});
+
+app.listen(3000, () => {
+  console.log("Servidor iniciado en el puerto 3000");
 });

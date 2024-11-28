@@ -23,7 +23,6 @@ function openPage(pageName, elmnt, color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-
 //Slideshow página de inicio
 let slideIndex = 0;
 showSlides();
@@ -35,7 +34,28 @@ function showSlides() {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
+
+let modal = document.getElementById("id01");
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#id_password");
+
+togglePassword.addEventListener("click", function (e) {
+  // toggle the type attribute
+  const type =
+    password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  // toggle the eye slash icon
+  this.classList.toggle("fa-eye-slash");
+});

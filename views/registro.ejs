@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <title>Registro - BookBox Market</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  </head>
+  <body>
+    <h1>Regístrate a BookBox Market</h1>
+    <form action="/register" method="POST">
+      <label for="nombre">Nombres: </label>
+      <input type="text" name="nombre" class="input_usu" placeholder="Nombres del usuario" required />
+      <br>
+      <label for="nombre">Apellidos: </label>
+      <input type="text" name="apellido" class="input_usu" placeholder="Apellidos del usuario" required />
+      <br>
+      <label for="nombre">E-mail: </label>
+      <input type="text" name="email" class="input_usu" placeholder="Email del usuario" required />
+      <br>
+      <label for="nombre">Contraseña: </label>
+      <br>
+      <input type="password" class="pass_registro" name="password" autocomplete="current-password"
+      id="id_password" placeholder="Contraseña del usuario" required />
+      <i class="far fa-eye" id="togglePassword" style="margin-left: 15px; cursor: pointer;"></i>
+      <br>
+      <label for="nombre">Teléfono: </label>
+      <input type="text" name="telefono" class="input_usu" placeholder="Teléfono del usuario" required />
+      <br>
+      <label for="nombre">Dirección: </label>
+      <input type="text" name="direccion" class="input_usu" placeholder="Dirección del usuario" required />
+      <br>
+      <label for="nombre">Ciudad: </label>
+      <input type="text" name="ciudad" class="input_usu" placeholder="Ciudad del usuario" required />
+      <br>
+      <label for="nombre">País: </label>
+      <input type="text" name="pais" class="input_usu" placeholder="País del usuario" required />
+      <br>
+      <label for="nombre">Código Postal: </label>
+      <input type="text" name="codigo_postal" class="input_usu" placeholder="Código postal del usuario" />
+      <br>
+      <label for="nombre">Fecha de Nacimiento: </label>
+      <input type="date" name="fecha_nto" required />
+      <br>
+      <label for="nombre">Preferencias Literarias: </label>
+      <input type="text" name="preferencias_literarias" class="input_usu" placeholder="Tus preferencias literarias" />
+      <br>
+      <button type="submit">Registrar</button>
+    </form>
+    <script src="/app_registro.js"></script>
+  </body>
+</html>
