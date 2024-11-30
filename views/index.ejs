@@ -184,6 +184,34 @@
           tecnologías inmersivas para crear experiencias de lectura únicas y
           memorables.
         </p>
+        <br>
+        <h1>Integrantes del Proyecto</h1>
+        <section class="libros">
+          <div class="libro" data-id="1">
+            <img src="/foto1.jpg" alt="Libro 1" />
+            <p style="font-size: 16px; font-weight: bold;">Miguel Angel Fabra</p>
+            <p style="font-size: 16px;">Tecnólogo en Sistemas de Información</p>
+            <p style="font-size: 16px;">Programador Full Stack/Soporte Técnico</p>
+            <p style="font-size: 16px;">Leader/Backend</p>
+          </div>
+          <div class="libro1" data-id="2">
+            <img src="/foto3.jpg" alt="Libro 2" />
+            <p style="font-size: 16px; font-weight: bold;">Gerson David Perez</p>
+            <p style="font-size: 16px;">Tecnólogo en Sistemas</p>
+            <p style="font-size: 16px;">Coordinador de Infraestructura Tecnológica</p>
+            <p style="font-size: 16px;">Frontend</p>
+            
+          </div>
+          <div class="libro2" data-id="3">
+            <img src="/foto2.jpg" alt="Libro 3" />
+            <p style="font-size: 16px; font-weight: bold;">Jhon Jairo Mosquera</p>
+            <p style="font-size: 16px;">Tecnólogo en Sistemas</p>
+            <p style="font-size: 16px;">Programador de Software</p>
+            <p style="font-size: 16px;">Backend/Base de Datos</p>
+            
+          </div>
+        </section>
+
 
         <div class="spacer"></div>
       </div>
@@ -261,7 +289,7 @@
         <input type="hidden" class="input_usu" name="id_caja" id="id_caja"/>
         <input type="hidden" class="input_usu" name="metodo_pago" id="metodo_pago"/>
         <input type="date" name="fecha_compra" id="fecha_compra"/>
-        <label for="metodo_pago">Método de pago:</label>
+        <label for="metodo_pago">Método de pago:</label> 
         <select name="metodo_pago2" id="metodo_pago2" onchange="getSelect()">
           <option value="seleccione" disabled selected>Seleccione una opción</option>
           <option value="credito">Tarjeta Crédito</option>
@@ -270,7 +298,7 @@
           <option value="pse">PSE</option>
         </select>
         <br><br><br>
-        <button type="submit" class="btn-comprar">Comprar</button>
+        <button type="submit" class="btn-comprar" onclick="alertaCompra()">Comprar</button>
       </form>
       </div>
       <div id="Donacionlibros" class="tabcontent">
@@ -333,7 +361,7 @@
           <label for="fecha_donacion">Fecha de Donación: </label>
           <input type="date" name="fecha_donacion" required />
           <br /><br />
-          <button type="submit">Registrar Donación</button>
+          <button type="submit" onclick="alertaDonacion()">Registrar Donación</button>
 
           <div class="spacer"></div>
         </form>
@@ -390,7 +418,7 @@
             style="margin-left: 10px; cursor: pointer"
           ></i>
           <br /><br />
-          <button type="submit" class="btn_mod">Iniciar sesión</button>
+          <button type="submit" class="btn_mod" onclick="alertaLogin()">Iniciar sesión</button>
           <br />
           <input type="checkbox" checked="checked" />Recuérdame
         </div>

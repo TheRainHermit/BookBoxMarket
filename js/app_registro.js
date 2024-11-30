@@ -11,3 +11,6 @@ togglePassword.addEventListener("click", function (e) {
   this.classList.toggle("fa-eye-slash");
 });
 
+function alertaRegistro(){
+  alert("Se ha registrado exitosamente");
+}

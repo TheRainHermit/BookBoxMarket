@@ -77,6 +77,7 @@ function agregarAlCarrito(id, nombre, precio) {
 
   // Mostrar los productos en el carrito
   mostrarCarrito();
+  alert("Caja añadida al carrito");
 }
 
 function mostrarCarrito() {
@@ -130,4 +131,16 @@ function getSelect() {
 
 function alerta(){
   alert("Su solicitud de contacto ha sido recibida");
+}
+
+function alertaCompra(){
+  alert("Su compra ha sido realizada");
+}
+
+function alertaLogin(){
+  alert("Inicio de sesión exitoso");
+}
+
+function alertaDonacion(){
+  alert("Donación realizada con éxito");
 }
