@@ -35,6 +35,14 @@ CREATE TABLE `cajas` (
   `cantidad_libros` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `cajas`(`nombre_caja`, `descripcion`, `precio`, `cantidad_libros`) VALUES ('Caja Oculta','Todo será completamente aleatorio','100000','5');
+
+INSERT INTO `cajas`(`nombre_caja`, `descripcion`, `precio`, `cantidad_libros`) VALUES ('Caja Misteriosa','Hay un 50% de probabilidad de que los libros que aprezcan en la
+              caja sean en base a tus preferencias','150000','5');
+
+INSERT INTO `cajas`(`nombre_caja`, `descripcion`, `precio`, `cantidad_libros`) VALUES ('Caja Sospechosa','Hay un 80% de probabilidad de que los libros que aparezcan en la
+              caja sean en base a tus preferencias. Por lo menos un libro será
+              garantizado de una de tus preferencias','250000','5');
 -- --------------------------------------------------------
 
 --

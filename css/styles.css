@@ -44,15 +44,29 @@ body {
     padding: 10px;
     border: 2px solid #ccc;
   }
+
+  .imagen{
+    display: block;
+    margin: 2px auto;
+    padding: 3px;
+    border: 1px solid #ccc;
+  }
+
+  .imagenlogin{
+    display: block;
+    margin: 2px auto;
+    padding: 1px;
+    border: 1px solid #ccc;
+  }
   
   /* Estilización de enlaces */
   a {
     display: block;
     text-align: center;
-    margin: 5px;
+    margin: 10px;
     color: #9F111B;
     text-decoration: none;
-    padding: 8px;
+    padding: 10px;
   }
   
   a:hover {
@@ -184,15 +198,16 @@ body {
 
 /* Style tab links */
 .tablink {
-  background-color: #555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #9F111B;
   color: white;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 10px 12px;
-  font-size: 17px;
-  width: 16%;
+  font-size: 16px;
+  width: 100%;
 }
 
 .tablink:hover {
@@ -303,7 +318,7 @@ button:hover{
 
 /*set image properties*/
 img.avatar {
-  width: 40%;
+  width: 20%;
   border-radius: 50%;
 }
 
@@ -398,6 +413,23 @@ p.pefooter{
 
 }
 
+.input_area {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+}
+
+.text_area {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+}
+
+
 /*Front Gerson*/
 footer {
   background-color: #9F111B;
@@ -416,7 +448,15 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
+  
+/*.libros {
+    display: flex;
+    justify-content: space-around;
+
+    
+  }*/
 
 .libro {
   border: 1px solid #9F111B;
@@ -474,18 +514,12 @@ footer {
   text-align: center;
 }
 
-form {
-
-  width: 300px;
-  margin: 0 auto;
-}
-
 label {
   display: block;
   margin-bottom: 5px;
 }
 
-input, textarea {
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -518,6 +552,8 @@ button {
 .contactos {
 
   float: left;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .contactanos {
@@ -526,6 +562,7 @@ button {
   padding-left: 30px;
 }
 
+/*
 .carrito {
   background-color: #fff;
   padding: 20px;
@@ -536,6 +573,19 @@ button {
   margin-top: 100px;
   margin-left: 350px;
 }
+  */
+#carrito {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#carrito li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
 
 table {
   width: 100%;
@@ -543,6 +593,7 @@ table {
 }
 
 th, td {
+  color: #000;
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -571,4 +622,12 @@ th, td {
   border-radius: 5px;
   cursor: pointer;
 
+}
+
+select{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
 }

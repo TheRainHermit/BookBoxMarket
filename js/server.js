@@ -162,7 +162,7 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-// Ruta para el registro de usuarios
+// Ruta para el registro de donaciones
 app.post("/donacionlibro", (req, res) => {
   const {
     libro_id,
@@ -187,6 +187,32 @@ app.post("/donacionlibro", (req, res) => {
       }
     );
   });
+
+// Ruta para el registro de compras
+app.post("/compra", (req, res) => {
+  const {
+    usuario_id,
+    fecha_compra,
+    metodo_pago,   
+  } = req.body;
+    const sql =
+      "INSERT INTO compra (usuario_id, fecha_compra, metodo_pago)"+
+      "VALUES (?, ?, ?)";
+    db.query(
+      sql,
+      [
+        usuario_id,
+        fecha_compra,
+        metodo_pago,
+      ],
+      (err, result) => {
+        if (err) throw err;
+        res.redirect("/");
+      }
+    );
+    
+  });
+
 
 app.listen(3000, () => {
   console.log("Servidor iniciado en el puerto 3000");
