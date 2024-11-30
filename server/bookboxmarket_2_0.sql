@@ -90,6 +90,14 @@ CREATE TABLE `libros` (
   `estado` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `libros`(`titulo`, `autor`, `editorial`, `anio_publicacion`, `genero`, `estado`) VALUES ('Cien años de soledad','Gabriel García Márquez','Norma','1967','Novela','Usado');
+
+INSERT INTO `libros`(`titulo`, `autor`, `editorial`, `anio_publicacion`, `genero`, `estado`) VALUES ('El Principito','Antoine de Saint-Exupéry','Norma','1943','Fantasía','Nuevo');
+
+INSERT INTO `libros`(`titulo`, `autor`, `editorial`, `anio_publicacion`, `genero`, `estado`) VALUES ('1984','George Orwell','Norma','1949','Distopía','Usado');
+
+INSERT INTO `libros`(`titulo`, `autor`, `editorial`, `anio_publicacion`, `genero`, `estado`) VALUES ('Matar a un ruiseñor','Harper Lee','Norma','1960','Drama','Nuevo');
+
 -- --------------------------------------------------------
 
 --

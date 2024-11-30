@@ -25,6 +25,10 @@
       id="id_password" placeholder="Contraseña del usuario" required />
       <i class="far fa-eye" id="togglePassword" style="margin-left: 15px; cursor: pointer;"></i>
       <br>
+      <label for="nombre">Confirmar Contraseña: </label>
+      <input type="password" class="pass_confirmpassword" name="confirmpassword" autocomplete="current-password"
+      id="id_confirmpassword" placeholder="Confirmar Contraseña del usuario" required />
+      <br>
       <label for="nombre">Teléfono: </label>
       <input type="text" name="telefono" class="input_usu" placeholder="Teléfono del usuario" required />
       <br>
@@ -48,6 +52,7 @@
       <br>
       <button type="submit">Registrar</button>
     </form>
+    <div class="spacer"></div>
     <script src="/app_registro.js"></script>
   </body>
 </html>

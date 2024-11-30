@@ -14,34 +14,35 @@
   <main>
     <nav>
       <ul>
-        <li>BookBox Market</a></li>
-        <li style="float:right"><img src="/login.jpg" 
+        <li><a href="/"><img src="/logoinicio.png"></a></li>
+        <li style="float:right">
+          <p id="sesion"></p>
+          <img src="/user.png" 
           onclick="document.getElementById('id01').style.display='block'" 
-            style="width:auto;""></a></li>
+            style="width:auto;"></a></li>
       </ul>
     </nav>
-    <button class="tablink" onclick="openPage('Inicio', this, 'red')" id="defaultOpen">
-      Inicio
+    <button class="tablink" onclick="openPage('Inicio', this, '#9F111B')" id="defaultOpen">
+      <img src="/logoinicio.png">
     </button>
-    <button class="tablink" onclick="openPage('Contacto', this, 'blue')">
+    <button class="tablink" onclick="openPage('Contacto', this, '#9F111B')">
       Contacto
     </button>
-    <button class="tablink" onclick="openPage('Quienessomos', this, 'orange')">
+    <button class="tablink" onclick="openPage('Quienessomos', this, '#9F111B')">
       Quiénes Somos
     </button>
-    <button class="tablink" onclick="openPage('Catalogo', this, 'green')">
+    <button class="tablink" onclick="openPage('Catalogo', this, '#9F111B')">
       Catálogo
     </button>
-    <button class="tablink" onclick="openPage('Compra', this, 'aqua')">
+    <button class="tablink" onclick="openPage('Compra', this, '#9F111B')">
       Compra cajas
     </button>
-    <button class="tablink" onclick="openPage('Donacionlibros', this, 'purple')">
+    <button class="tablink" onclick="openPage('Donacionlibros', this, '#9F111B')">
       Dona un libro
     </button>
 
     <div id="Inicio" class="tabcontent">
-      <img src="/bookbox.png" alt="Imagen de ejemplo de logo" />
-      <h1>BookBox Market</h1>
+      <img src="/logo.png" alt="Imagen de ejemplo de logo" />
       <p>¿Quieres leer? ¡Pues abre una caja!</p>
       <br />
       <!-- Slideshow container -->
@@ -50,21 +51,21 @@
         <!-- Full-width images with number and caption text -->
 
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="/bookbox.png" style="width: 100%" />
-          <div class="text">Caption Text</div>
+          <div class="numbertext"></div>
+          <img src="/caja.jpeg" style="width: 50%" />
+          <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="/sadge.jpg" style="width: 100%" />
-          <div class="text">Caption Two</div>
+          <div class="numbertext"></div>
+          <img src="/caja1.jpeg" style="width: 50%" />
+          <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="/login.jpg" style="width: 100%" />
-          <div class="text">Caption Three</div>
+          <div class="numbertext"></div>
+          <img src="/caja2.jpeg" style="width: 50%" />
+          <div class="text"></div>
         </div>
 
         <!-- Next and previous buttons -->
@@ -84,60 +85,162 @@
     </div>
 
     <div id="Contacto" class="tabcontent">
-      <h2>Contáctenos</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio quaerat iure odit, nisi, facilis
-        ipsa cupiditate modi natus mollitia dolores ipsum! Id, sint. Mollitia deserunt iusto nobis doloremque natus!
-    </p>
+      <div class="container">
+
+
+        <img class="logocontacto" src="/logo.png" alt="Imagen de ejemplo de logo">
+        <h1 class="contactanos">¡Contactanos!</h1>
+
+
+        <form class="contactos">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="presupuesto">Presupuesto:</label>
+            <input type="text" id="presupuesto" name="presupuesto">
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" 
+ rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+
+            <div class="spacer"></div>
+        </form>
+
+        <div 
+ class="social-media">
+            <a href="#"><i class="fab fa-instagram"><img src="/face.png"></i></a>
+            <a href="#"><i class="fab fa-twitter"><img src="/twitter.png"></i></a>
+
+            <a href="#"><i class="fab fa-facebook"><img src="/insta.png"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"><img src="/whats.png"></i></a>
+        </div>
+    </div>
+    <br>
     </div>
 
     <div id="Quienessomos" class="tabcontent">
       <h2>Quiénes Somos</h2>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio quaerat iure odit, nisi, facilis
-            ipsa cupiditate modi natus mollitia dolores ipsum! Id, sint. Mollitia deserunt iusto nobis doloremque natus!
-        </p>
-
-        <br>
-        <div class="mision">
-
-            <p class="tmision">Mision</p>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorum possimus nobis quibusdam
-                obcaecati saepe quas quo! A accusamus ex, quos accusantium corporis et numquam facilis suscipit maiores
-                nihil vitae!</p>
-
-        </div>
-
-        <div class="vision">
-
-            <p class="tvision">Vision</p>
-
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias corporis tempora dolorem distinctio, nam
-                ratione sint officia pariatur, dolores facere voluptatum? Enim architecto distinctio eligendi nam
-                nostrum nesciunt deleniti sapiente?</p>
-
-
-            
-
-        </div>
+      <img src="/logo.png" alt="Imagen de ejemplo de logo">
+      <h1>¿Quienes Somos?</h1>
+      <br>
+      <h2>Mision</h2>
+      <p>Nuestra misión es fomentar el amor por la lectura de una manera sostenible y divertida. A través de nuestras
+          cajas sorpresa, conectamos a los lectores con nuevos mundos y autores, promoviendo la diversidad literaria. Al
+          mismo tiempo, contribuimos al cuidado del planeta al reutilizar libros donados, reduciendo la producción de
+          papel y promoviendo una cultura de lectura más circular. Con cada caja, no solo regalamos historias, sino
+          también la esperanza de un futuro más verde.</p>
+  
+      <h2>Vision</h2>
+      <p>En 2027, utilizaremos la inteligencia artificial y el big data para ofrecer una experiencia de lectura totalmente
+          personalizada. Nuestras cajas sorpresa se adaptarán a los gustos y preferencias de cada lector, recomendando
+          títulos y autores que nunca antes habrían considerado. Además, integraremos realidad aumentada y otras
+          tecnologías inmersivas para crear experiencias de lectura únicas y memorables.</p>
+  
+  
+          <div class="spacer"></div>
     </div>
 
     <div id="Catalogo" class="tabcontent">
-      <h3>Catálogo</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis optio quaerat iure odit, nisi, facilis
-        ipsa cupiditate modi natus mollitia dolores ipsum! Id, sint. Mollitia deserunt iusto nobis doloremque natus!
-    </p>
+      <img src="/logo.png" alt="Imagen de ejemplo de logo">
+    <h1>Catalogo</h1>
+    <br>
+        <section class="libros">
+            <div class="libro">
+                <img src="/cata1.png" alt="Libro 1">
+                <h2>Caja Oculta</h2>
+                <p>Todo será completamente aleatorio</p>
+                <p>Precio: $100.000 COP</p>
+                <button class="btn-agregarcarro">Agregar al Carrito</button>
+            </div>
+            <div class="libro1">
+                <img src="/cata2.png" alt="Libro 1">
+                <h2>Caja Misteriosa</h2>
+                <p>Hay un 50% de probabilidad de que los libros que 
+                    aprezcan en la caja sean en base a tus preferencias</p>
+                <p>Precio: $150.000 COP</p>
+                <button class="btn-agregarcarro">Agregar al Carrito</button>
+            </div>
+            <div class="libro2">
+                <img src="/cata3.png" alt="Libro 1">
+                <h2>Caja Sospechosa</h2>
+                <p>Hay un 80% de probabilidad de que los libros que aparezcan en la caja sean en base a tus preferencias. 
+                    Por lo menos un libro será garantizado de una de tus preferencias</p>
+                <p>Precio: $250.000 COP</p>
+                <button class="btn-agregarcarro">Agregar al Carrito</button>
+            </div>
+            </section>
     </div>
     <div id="Compra" class="tabcontent">
-      <h3>Compra Cajas</h3>
-      <p>Who we are and what we do.</p>
+      <img class="logocontacto" src="/logo.png" alt="Imagen de ejemplo de logo">
+      <h1>Carrito de Compra</h1>
+  
+      <div class="carrito">
+          <h2>Tu Carrito</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Total:</td>
+                <td id="total">0</td>
+              </tr>
+            </tfoot>
+          </table>
+          <button class="btn-comprar">Comprar</button>
+        </div>
     </div>
     <div id="Donacionlibros" class="tabcontent">
-      <h3>Donación de Libros</h3>
-      <p>Who we are and what we do.</p>
+      <img class="logocontacto" src="/logo.png" alt="Imagen de ejemplo de logo">
+      <h1>Donacion de Libros</h1>
+  
+      <form action="/donacionlibro" method="POST" class="donaciones">
+        <input type="hidden" name="libro_id" value="1" >
+        <input type="hidden" name="usuario_id" value="1" >
+        <input type="hidden" name="estado_donacion" value="En Proceso" >
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+  
+          <label for="cantidad">Cantidad de libros a donar:</label>
+          <input type="text" id="cantidad" name="cantidad">
+
+          <label for="libro">Libro: </label>
+          <input type="text" name="libro" class="input_usu" placeholder="Nombre del libro" required />
+  
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="mensaje">Explica brevemente tu solicitud de donacion:</label>
+          <textarea id="mensaje" name="mensaje" 
+  rows="5" required></textarea>
+          <label for="fecha_donacion">Fecha de Donación: </label>
+          <input type="date" name="fecha_donacion" required />
+  
+          <button type="submit">Registrar Donación</button>
+  
+          <div class="spacer"></div>
+      </form>
+  
+      <div class="spacer"></div>
     </div>
+
+    <div class="spacer"></div>
+
     <footer>
-      <p>&copy; 2024, BookBox Market. Todos los derechos reservados.</p>
+      <p class="pefooter">&copy; 2024, BookBox Market. Todos los derechos reservados.</p>
     </footer>
   </main>
   
